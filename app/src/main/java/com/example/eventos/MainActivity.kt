@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     //hola
+
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>? = null
     lateinit var recyclerView: RecyclerView

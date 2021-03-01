@@ -7,6 +7,57 @@
     tools:context=".MainActivity">
 
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="431dp"
+        android:layout_height="96dp"
+        app:cardBackgroundColor="@color/purple_700"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="444dp"
+            android:layout_height="98dp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="399dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="134dp"
+                android:text="@string/events"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
         android:layout_width="match_parent"
@@ -35,24 +86,58 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/my_nav" />
 
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="MissingConstraints">
 
+
+        <EditText
+            android:id="@+id/txt_find_event"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableRight="@drawable/ic_search"
+            android:focusableInTouchMode="true"
+            android:hint="@string/findevent"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintVertical_bias="0.0" />
+    </FrameLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="446dp"
-        android:layout_height="570dp"
+        android:id="@+id/constraintLayout"
+        android:layout_width="443dp"
+        android:layout_height="580dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         tools:ignore="MissingConstraints">
 
         <FrameLayout
-            android:layout_width="421dp"
-            android:layout_height="553dp"
+            android:layout_width="419dp"
+            android:layout_height="556dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="5dp">
+            tools:layout_editor_absoluteY="2dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="426dp"
@@ -75,7 +160,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="404dp"
-                    android:layout_height="513dp"
+                    android:layout_height="536dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -85,6 +170,8 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0"
                     tools:ignore="MissingConstraints" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </FrameLayout>
