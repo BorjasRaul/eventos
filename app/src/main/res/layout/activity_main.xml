@@ -70,7 +70,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/custom_edittext"
-            android:drawableRight="@drawable/ic_search"
+            android:drawableRight="@drawable/ic_icono_buscar"
             android:focusableInTouchMode="true"
             android:hint="@string/findevent"
             android:importantForAutofill="no"
